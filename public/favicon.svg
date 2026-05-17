@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="14" fill="#1a0f0a"/>
+  <path d="M32 14c-7.7 0-14 6.3-14 14 0 8 6 14.5 14 18 8-3.5 14-10 14-18 0-7.7-6.3-14-14-14z" fill="none" stroke="#d4a574" stroke-width="2.5"/>
+  <circle cx="32" cy="28" r="6" fill="#d4a574"/>
+  <text x="32" y="56" text-anchor="middle" fill="#d4a574" font-family="Georgia, serif" font-size="9" font-weight="700" letter-spacing="2">RAON</text>
+</svg>
