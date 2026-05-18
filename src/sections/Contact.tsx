@@ -27,9 +27,9 @@ export function Contact() {
                 <span className="font-mono text-xs uppercase tracking-[0.3em] text-gold-400">
                   Direct Contact
                 </span>
-                <h3 className="mt-6 font-display text-4xl lg:text-5xl">
+                <h3 className="mt-6 font-display text-3xl leading-tight sm:text-4xl lg:text-5xl">
                   대표 {company.ceo}
-                  <span className="ml-3 text-sm font-normal tracking-widest text-cream-200/60">
+                  <span className="mt-2 block text-xs font-normal tracking-[0.22em] text-cream-200/60 sm:ml-3 sm:mt-0 sm:inline sm:text-sm">
                     CEO · {company.ceoEn}
                   </span>
                 </h3>

@@ -56,6 +56,11 @@
     overflow-wrap: break-word;
   }
 
+  /* 앵커 클릭 시 sticky 헤더 높이만큼 여백 확보 */
+  section[id] {
+    scroll-margin-top: 80px;
+  }
+
   /* 한국어와 영문 italic 혼합 시 italic 부분만 자연스럽게 처리 */
   em, i {
     word-break: keep-all;
