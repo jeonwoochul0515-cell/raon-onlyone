@@ -1,10 +1,15 @@
 // 3대 핵심 서비스 - PPT 슬라이드 6, 7, 10
+import warehouseInterior from '@/assets/images/warehouse-interior.webp'
+import barista from '@/assets/images/stock/barista.webp'
+import coffeeBag from '@/assets/images/stock/coffee-bag.webp'
+
 export type Service = {
   id: string
   kicker: string
   title: string
   description: string
   bullets: string[]
+  image: string
 }
 
 export const services: Service[] = [
@@ -20,6 +25,7 @@ export const services: Service[] = [
       '수주 · 현장 · 배송 · CS 전담 인력 운영',
       'One-Stop 통합 운영으로 Cost 절감',
     ],
+    image: warehouseInterior,
   },
   {
     id: 'consulting',
@@ -33,6 +39,7 @@ export const services: Service[] = [
       '점주 사입 예방 · 제품 라인업 설계',
       '시즌별 신제품 기획 지원',
     ],
+    image: barista,
   },
   {
     id: 'oem',
@@ -46,5 +53,6 @@ export const services: Service[] = [
       '대량 OEM 생산 파트너 네트워크',
       '품질 관리 · QC 일관성 보장',
     ],
+    image: coffeeBag,
   },
 ]

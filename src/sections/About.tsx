@@ -1,7 +1,9 @@
-// 회사 소개 + 핵심 가치(공존/성공/변화) 섹션
+// 회사 소개 + 핵심 가치(공존/성공/변화) + 카페 분위기 사이드 비주얼
 import { Reveal } from '@/components/Reveal'
 import { coreValues } from '@/data/values'
 import { company } from '@/data/company'
+import cafeBar from '@/assets/images/stock/cafe-bar.webp'
+import coffeeBeans from '@/assets/images/stock/coffee-beans.webp'
 
 export function About() {
   return (
@@ -15,6 +17,14 @@ export function About() {
               <br />
               <span className="italic">하나의 기준</span>이 되다.
             </h2>
+            <div className="mt-10 hidden overflow-hidden rounded-3xl bg-espresso-950 lg:block">
+              <img
+                src={cafeBar}
+                alt="카페 바 인테리어"
+                className="aspect-[4/5] w-full object-cover opacity-95"
+                loading="lazy"
+              />
+            </div>
           </Reveal>
 
           <Reveal delay={0.1}>
@@ -32,6 +42,14 @@ export function About() {
               "다양한 운영 Know-How로 고객 Needs에 기여하는 카페물류 기업" — 3PL·4PL 물류, 제품 컨설팅, OEM/PB 등 다양한 영역을 운영하며
               고객이 요구하는 어떠한 서비스도 <em className="italic text-espresso-900">One-Stop</em>으로 처리합니다.
             </p>
+            <div className="mt-10 overflow-hidden rounded-3xl bg-espresso-950">
+              <img
+                src={coffeeBeans}
+                alt="커피 한 잔과 원두"
+                className="aspect-[16/9] w-full object-cover opacity-95"
+                loading="lazy"
+              />
+            </div>
           </Reveal>
         </div>
 

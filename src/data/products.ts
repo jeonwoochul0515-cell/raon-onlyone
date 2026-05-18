@@ -3,6 +3,10 @@ import product1 from '@/assets/images/product-1.webp'
 import product2 from '@/assets/images/product-2.webp'
 import product3 from '@/assets/images/product-3.webp'
 import product4 from '@/assets/images/product-4.webp'
+import baseImg from '@/assets/images/stock/espresso.webp'
+import latteImg from '@/assets/images/stock/latte-art.webp'
+import frappeImg from '@/assets/images/stock/dessert.webp'
+import smoothieImg from '@/assets/images/stock/smoothie.webp'
 
 export type ProductCategory = 'base' | 'latte' | 'frappe' | 'smoothie'
 
@@ -14,11 +18,17 @@ export type Product = {
   image?: string
 }
 
-export const productCategories: { id: ProductCategory; label: string; en: string }[] = [
-  { id: 'base', label: '음료 베이스', en: 'Beverage Base' },
-  { id: 'latte', label: '라떼 & 파우더', en: 'Latte & Powder' },
-  { id: 'frappe', label: '프라페 & 디저트', en: 'Frappé & Dessert' },
-  { id: 'smoothie', label: '스무디', en: 'Smoothie' },
+export const productCategories: {
+  id: ProductCategory
+  label: string
+  en: string
+  cover: string
+  tone: string
+}[] = [
+  { id: 'base', label: '음료 베이스', en: 'Beverage Base', cover: baseImg, tone: '깊고 진한 베이스로 메뉴의 기준을 세웁니다.' },
+  { id: 'latte', label: '라떼 & 파우더', en: 'Latte & Powder', cover: latteImg, tone: '시그니처 라떼의 풍부한 질감을 구현합니다.' },
+  { id: 'frappe', label: '프라페 & 디저트', en: 'Frappé & Dessert', cover: frappeImg, tone: '계절을 사로잡는 디저트성 메뉴 라인업.' },
+  { id: 'smoothie', label: '스무디', en: 'Smoothie', cover: smoothieImg, tone: '과일 본연의 신선함을 그대로 담아냅니다.' },
 ]
 
 export const products: Product[] = [

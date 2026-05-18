@@ -1,6 +1,7 @@
-// 4가지 차별점 섹션 - PPT 슬라이드 2 기반
+// 4가지 차별점 섹션 + 라떼 아트 비주얼 인용구
 import { Reveal } from '@/components/Reveal'
 import { whyUs } from '@/data/whyUs'
+import latteArt from '@/assets/images/stock/latte-art.webp'
 
 export function WhyUs() {
   return (
@@ -51,10 +52,23 @@ export function WhyUs() {
           ))}
         </div>
 
-        <Reveal delay={0.2}>
-          <p className="mt-16 text-center font-display text-xl italic text-gold-400 lg:text-2xl">
-            "재료 하나가 브랜드의 경쟁력입니다 — 라온트레이더스가 함께합니다."
-          </p>
+        <Reveal delay={0.15}>
+          <div className="relative mt-20 overflow-hidden rounded-3xl border border-cream-50/10">
+            <img
+              src={latteArt}
+              alt="라떼 아트"
+              className="aspect-[21/9] w-full object-cover opacity-90"
+              loading="lazy"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-espresso-950 via-espresso-950/60 to-espresso-950/20" />
+            <div className="absolute inset-0 grid place-items-center px-6 text-center">
+              <p className="font-display text-2xl italic text-gold-400 sm:text-3xl lg:text-4xl">
+                "재료 하나가 브랜드의 경쟁력입니다
+                <br className="hidden sm:block" />
+                — 라온트레이더스가 함께합니다."
+              </p>
+            </div>
+          </div>
         </Reveal>
       </div>
     </section>
