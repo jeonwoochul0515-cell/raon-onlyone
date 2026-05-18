@@ -11,13 +11,15 @@ export const company = {
   ceoEn: 'Lee Tae Kyung',
   hq: '부산광역시 금정구 체육공원로 150',
   hqLabel: '온리원커피 물류센터',
-  org: '관리·현장 3개 조직, 8명',
+  org: '3개 조직 · 관리자 8명 외 현장인력',
   business: '카페재료 유통 / 프랜차이즈 통합 물류 / 커피 컨설팅 / OEM·PB 공급',
   registrationNumber: '180111-1384732',
   businessNumber: '365-88-02072',
   phone: '010-8518-3614',
   office: '070-8691-0162',
   email: 'raontd@naver.com',
+  kakaoChannel: 'https://pf.kakao.com/_nxaDxhxb',
+  kakaoChat: 'https://pf.kakao.com/_nxaDxhxb/chat',
   hubs: ['부산 금정', '경남 김해', '경기 광주'],
 } as const
 

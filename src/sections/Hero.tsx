@@ -67,14 +67,22 @@ export function Hero() {
               transition={{ duration: 0.8, delay: 0.7 }}
               className="mt-10 flex flex-wrap items-center gap-4"
             >
-              <a href="#services" className="btn-primary bg-gold-400 text-espresso-950 hover:bg-gold-500">
-                서비스 살펴보기
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                  <path d="M5 12h14M13 5l7 7-7 7" />
+              <a
+                href={company.kakaoChat}
+                target="_blank"
+                rel="noreferrer"
+                className="btn-primary bg-[#FEE500] text-[#3C1E1E] hover:bg-[#FFEB3B]"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M12 3C6.477 3 2 6.5 2 10.84c0 2.78 1.86 5.22 4.66 6.6-.18.6-.66 2.2-.76 2.55-.12.42.16.42.34.31.14-.08 2.21-1.5 3.1-2.1.86.12 1.74.18 2.66.18 5.52 0 10-3.5 10-7.84S17.52 3 12 3z" />
                 </svg>
+                카톡 상담 시작
               </a>
               <a href="#products" className="btn-ghost border-cream-50/30 text-cream-50 hover:bg-cream-50 hover:text-espresso-950">
                 RAON JENA 라인업
+              </a>
+              <a href="#services" className="text-sm font-medium text-cream-200/70 underline-offset-4 transition-colors hover:text-cream-50 hover:underline">
+                서비스 살펴보기 →
               </a>
             </motion.div>
           </div>

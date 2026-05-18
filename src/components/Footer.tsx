@@ -27,6 +27,14 @@ export function Footer() {
             <h4 className="text-xs uppercase tracking-[0.22em] text-gold-400">Contact</h4>
             <ul className="mt-5 space-y-3 text-sm">
               <li>
+                <a href={company.kakaoChat} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 hover:text-cream-50">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" className="text-gold-400">
+                    <path d="M12 3C6.477 3 2 6.5 2 10.84c0 2.78 1.86 5.22 4.66 6.6-.18.6-.66 2.2-.76 2.55-.12.42.16.42.34.31.14-.08 2.21-1.5 3.1-2.1.86.12 1.74.18 2.66.18 5.52 0 10-3.5 10-7.84S17.52 3 12 3z" />
+                  </svg>
+                  카카오톡 채널
+                </a>
+              </li>
+              <li>
                 <a href={`tel:${company.phone.replace(/-/g, '')}`} className="hover:text-cream-50">
                   대표 {company.phone}
                 </a>

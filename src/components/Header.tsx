@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { navItems } from '@/data/nav'
+import { company } from '@/data/company'
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false)
@@ -53,12 +54,14 @@ export function Header() {
         </nav>
 
         <a
-          href="#contact"
+          href={company.kakaoChat}
+          target="_blank"
+          rel="noreferrer"
           className="hidden btn-primary lg:inline-flex"
         >
-          상담 문의
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-            <path d="M5 12h14M13 5l7 7-7 7" />
+          카톡 상담
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 3C6.477 3 2 6.5 2 10.84c0 2.78 1.86 5.22 4.66 6.6-.18.6-.66 2.2-.76 2.55-.12.42.16.42.34.31.14-.08 2.21-1.5 3.1-2.1.86.12 1.74.18 2.66.18 5.52 0 10-3.5 10-7.84S17.52 3 12 3z" />
           </svg>
         </a>
 
@@ -113,13 +116,26 @@ export function Header() {
                   </motion.a>
                 ))}
               </nav>
-              <a
-                href="#contact"
-                onClick={() => setOpen(false)}
-                className="mt-auto btn-primary bg-gold-400 text-espresso-950 hover:bg-gold-500"
-              >
-                상담 문의 →
-              </a>
+              <div className="mt-auto flex flex-col gap-3">
+                <a
+                  href={company.kakaoChat}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="btn-primary bg-[#FEE500] text-[#3C1E1E] hover:bg-[#FFEB3B]"
+                >
+                  카톡 상담
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M12 3C6.477 3 2 6.5 2 10.84c0 2.78 1.86 5.22 4.66 6.6-.18.6-.66 2.2-.76 2.55-.12.42.16.42.34.31.14-.08 2.21-1.5 3.1-2.1.86.12 1.74.18 2.66.18 5.52 0 10-3.5 10-7.84S17.52 3 12 3z" />
+                  </svg>
+                </a>
+                <a
+                  href="#contact"
+                  onClick={() => setOpen(false)}
+                  className="btn-ghost border-cream-50/30 text-cream-50 hover:bg-cream-50 hover:text-espresso-950"
+                >
+                  연락처 보기 →
+                </a>
+              </div>
             </div>
           </motion.div>
         )}

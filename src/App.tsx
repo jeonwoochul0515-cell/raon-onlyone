@@ -3,6 +3,7 @@ import { useEffect } from 'react'
 import Lenis from 'lenis'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
+import { FloatingKakao } from '@/components/FloatingKakao'
 import { Hero } from '@/sections/Hero'
 import { About } from '@/sections/About'
 import { WhyUs } from '@/sections/WhyUs'
@@ -43,6 +44,7 @@ function App() {
         <Contact />
       </main>
       <Footer />
+      <FloatingKakao />
     </>
   )
 }

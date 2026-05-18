@@ -15,7 +15,7 @@ export function Contact() {
           </h2>
           <p className="mt-8 max-w-2xl text-lg leading-relaxed text-espresso-800/85">
             라온트레이더스 · 온리원커피와 함께할 프랜차이즈 본사·가맹점주를 환영합니다.
-            대표 번호 또는 이메일로 편하게 문의 주세요.
+            가장 빠른 응답은 <strong className="font-semibold text-espresso-900">카카오톡 상담</strong>이며, 전화·이메일도 함께 운영하고 있습니다.
           </p>
         </Reveal>
 
@@ -34,20 +34,28 @@ export function Contact() {
                   </span>
                 </h3>
                 <div className="mt-12 grid gap-6 sm:grid-cols-2">
+                  <ContactRow label="카카오톡 채널" value="@라온트레이더스" href={company.kakaoChannel} external />
                   <ContactRow label="대표 번호" value={company.phone} href={`tel:${company.phone.replace(/-/g, '')}`} />
                   <ContactRow label="Office" value={company.office} href={`tel:${company.office.replace(/-/g, '')}`} />
                   <ContactRow label="이메일" value={company.email} href={`mailto:${company.email}`} />
-                  <ContactRow label="센터" value={company.hubs.join(' · ')} />
                 </div>
-                <div className="mt-12 flex flex-wrap gap-4">
-                  <a href={`mailto:${company.email}`} className="btn-primary bg-gold-400 text-espresso-950 hover:bg-gold-500">
-                    이메일 보내기
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                      <path d="M5 12h14M13 5l7 7-7 7" />
+                <div className="mt-12 flex flex-wrap gap-3">
+                  <a
+                    href={company.kakaoChat}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="btn-primary bg-[#FEE500] text-[#3C1E1E] hover:bg-[#FFEB3B]"
+                  >
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                      <path d="M12 3C6.477 3 2 6.5 2 10.84c0 2.78 1.86 5.22 4.66 6.6-.18.6-.66 2.2-.76 2.55-.12.42.16.42.34.31.14-.08 2.21-1.5 3.1-2.1.86.12 1.74.18 2.66.18 5.52 0 10-3.5 10-7.84S17.52 3 12 3z" />
                     </svg>
+                    카톡 상담 시작
+                  </a>
+                  <a href={`mailto:${company.email}`} className="btn-ghost border-cream-50/30 text-cream-50 hover:bg-cream-50 hover:text-espresso-950">
+                    이메일
                   </a>
                   <a href={`tel:${company.phone.replace(/-/g, '')}`} className="btn-ghost border-cream-50/30 text-cream-50 hover:bg-cream-50 hover:text-espresso-950">
-                    전화 상담
+                    전화
                   </a>
                 </div>
               </div>
@@ -80,7 +88,7 @@ export function Contact() {
               </div>
               <div className="grid grid-cols-2 gap-4">
                 <InfoCard label="설립" value={company.founded.replace('2017년 4월 3일', '2017.04.03')} />
-                <InfoCard label="조직" value="3개 조직 · 8명" />
+                <InfoCard label="조직" value={company.org} />
                 <InfoCard label="사업자번호" value={company.businessNumber} />
                 <InfoCard label="법인등록" value={company.registrationNumber} />
               </div>
@@ -92,7 +100,7 @@ export function Contact() {
   )
 }
 
-function ContactRow({ label, value, href }: { label: string; value: string; href?: string }) {
+function ContactRow({ label, value, href, external }: { label: string; value: string; href?: string; external?: boolean }) {
   const inner = (
     <>
       <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-cream-200/50">
@@ -102,7 +110,11 @@ function ContactRow({ label, value, href }: { label: string; value: string; href
     </>
   )
   return href ? (
-    <a href={href} className="group block transition-colors hover:text-gold-400">
+    <a
+      href={href}
+      {...(external ? { target: '_blank', rel: 'noreferrer' } : {})}
+      className="group block transition-colors hover:text-gold-400"
+    >
       {inner}
     </a>
   ) : (
