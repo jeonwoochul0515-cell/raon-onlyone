@@ -40,6 +40,9 @@
     font-family: var(--font-sans);
     font-feature-settings: "ss01", "cv11";
     overflow-x: hidden;
+    /* 한국어 어절 단위 줄바꿈 - 단어 중간 끊김 방지 */
+    word-break: keep-all;
+    overflow-wrap: break-word;
   }
 
   ::selection {
@@ -49,6 +52,13 @@
 
   h1, h2, h3, h4 {
     letter-spacing: -0.02em;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+  }
+
+  /* 한국어와 영문 italic 혼합 시 italic 부분만 자연스럽게 처리 */
+  em, i {
+    word-break: keep-all;
   }
 
   img {

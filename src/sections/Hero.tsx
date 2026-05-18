@@ -41,7 +41,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-              className="font-display text-[clamp(2.6rem,7vw,6.5rem)] font-medium leading-[0.95] tracking-tight"
+              className="font-display text-[clamp(2rem,8.5vw,6.5rem)] font-medium leading-[1] tracking-tight"
             >
               재료 하나가
               <br />
